@@ -9,7 +9,7 @@ phases:
   pre_build:
     commands:
       - echo Logging in to Docker hub...
-      - echo $ritika@183 | docker login -u $ritika186 --password-stdin
+      - echo $DOCKER_PASSWORD | docker login -u $DOCKER_USERNAME --password-stdin
   build:
     commands:
       - echo Building, Testing and packaging the application...
